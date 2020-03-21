@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,300i,400,700|Oswald:300,400,500,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+}
+
+.App {
+  transition: all ease 0.4s;
+}
+
+a {
+  text-decoration: none;
+}
+
+/********** switch light/dark-theme mode***********/
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: -3px;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 16px;
+  width: 16px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/*************  Navbar ******************/
+.App .nav {
+  display: flex;
+  background-color: #f20183;
+  padding: 20px;
+  height: 260px;
+}
+
+.dark-mode .nav {
+  background-color: #222021;
+}
+
+/* ********  main content ******** */
+.content {
+  text-align: center;
+  min-height: 600px;
+}
+
+/*************** DARK MODE / lLIGHT MODE---------------*/
+.dark-mode {
+  background-color: rgb(46, 45, 45);
+  color: #fff;
+  transition: all ease 0.4s;
+}
+
+.App .items {
+  background-color: #f7f7f7;
+}
+
+.dark-mode .items {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.App li a {
+  color: #343636;
+}
+
+.dark-mode li a {
+  color: #e1e1e1;
+}
+
+.dark-mode .lightbox {
+  background-color: #2b2b2b !important;
+  color: #fff !important;
+}
+
+.App .lightbox {
+  color: #2b2b2b;
+  background-color: #fff;
+}
+
+.App form input {
+  background: #f7f7f7;
+  color: #343636;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode form input {
+  color: #fff;
+  background-color: #343636;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.App form .add-button {
+  background: #f7f7f7;
+  color: #343636;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  transition: all ease-in 0.4s;
+}
+.App form .add-button:hover {
+  background-color: #f20183;
+  color: #fff;
+}
+
+.dark-mode form .add-button {
+  color: #fff;
+  background-color: #343636;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  transition: all ease-in 0.4s;
+}
+.dark-mode form .add-button:hover {
+  background-color: #2b2b2b;
+}
+
+/* ********  Footer ******** */
+footer {
+  padding: 20px;
+  text-align: center;
+  border: none;
+}
+
+.App footer a {
+  color: #ccc;
+}
+
+.App footer {
+  background-color: #f7f7f7;
+  color: #343636;
+}
+
+.App footer a {
+  color: #343636;
+}
+
+.dark-mode footer {
+  background-color: #333;
+  color: #f7f7f7;
+}
+
+.dark-mode footer a {
+  color: #ccc;
+}
+
+/* Media queries/Responsive layout */
+
+@media screen and (max-width: 584px) {
+  .slider {
+    left: -4px;
+  }
+
+  .switch {
+    width: 50px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .slider {
+    left: -5px;
+  }
+
+  .switch {
+    width: 60px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .slider {
+    left: -10px;
+  }
+
+  .switch {
+    width: 60px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 418px) {
+  .slider {
+    left: -8px;
+  }
+
+  .switch {
+    width: 74px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  .slider {
+    left: -16px;
+  }
+
+  .switch {
+    width: 70px;
+    height: 24px;
+  }
+}
